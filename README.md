@@ -41,3 +41,13 @@ Refinamento de interface e novas funcionalidades de fluxo de trabalho.
 ├── conversor.py            # Script principal (Lógica de processamento e GUI)
 ├── README.md               # Documentação técnica do projeto
 └── Convertidos/            # Diretório de saída gerado automaticamente (opcional)
+```
+## Instalação e Execução
+
+1. Instale as dependências via gerenciador de pacotes:
+
+    `pip install Pillow tkinterdnd2`
+
+2. Execute o script principal:
+ 
+    `python conversor.py`
