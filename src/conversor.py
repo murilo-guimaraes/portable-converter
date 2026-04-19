@@ -89,14 +89,19 @@ class Main:
         self.root.title("Portable Converter | Build 19.4.26")
         self.root.geometry("1050x900") 
 
-        self.ffmpeg_path = os.path.join(os.path.dirname(__file__), "ffmpeg", "bin", "ffmpeg.exe")
+        caminho_atual = os.path.dirname(os.path.abspath(__file__))
+
+        raiz_projeto = os.path.dirname(caminho_atual)
+
+        self.ffmpeg_path = os.path.join(raiz_projeto, "ffmpeg", "bin", "ffmpeg.exe")
 
         # --- CARREGAR TEMA AZURE ---
         try:
-            caminho_tema = os.path.join(os.path.dirname(__file__), "azure", "azure.tcl")
+            caminho_tema = os.path.join(raiz_projeto, "azure", "azure.tcl")
             self.root.tk.call("source", caminho_tema)
             self.root.tk.call("set_theme", "dark")
-        except: pass
+        except Exception as e:
+            print(f"Erro ao carregar tema: {e}")
 
         self.arquivos_data = []
         self.formato_alvo = tk.StringVar(value="MP4")
