@@ -9,7 +9,7 @@ Um conversor multimídia simples, leve e eficiente. Desenvolvido para facilitar 
 
 > [!TIP]
 > **DOCUMENTOS (MODO BETA):** A funcionalidade de conversão de documentos está em fase experimental. Suporta PDF para DOCX/TXT e TXT para PDF.
-
+>
 ---
 
 <p align="center">
@@ -41,6 +41,11 @@ Um conversor multimídia simples, leve e eficiente. Desenvolvido para facilitar 
 
 *Legenda: Visualização da interface principal e do menu de seleção de categorias.*
 
+> [!WARNING]
+> **NOTAS DE PERFORMANCE E MULTITASKING:**
+> O processamento simultâneo de múltiplos arquivos exige muito do hardware. 
+> - **Recomendação:** Utilize processadores com múltiplos núcleos (Quad-core ou superior) para uma experiência fluida ao converter mais de 2 arquivos por vez.
+> - **Atenção:** Caso sinta lentidão ou o programa "congele" momentaneamente, reduza a quantidade de processos paralelos para 1 ou 2.
 ---
 
 ## Como usar
