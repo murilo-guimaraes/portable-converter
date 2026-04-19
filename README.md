@@ -73,5 +73,5 @@ python src/conversor.py
 ```
 
 <p align="center">
-   <img src="screenshots/imagens.gif" width="1200px" alt="Teste com Imagens>
+   <img src="screenshots/imagens.gif" width="1200px" alt="Teste com Imagens">
 </p>
