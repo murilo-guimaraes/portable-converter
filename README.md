@@ -1,53 +1,77 @@
-# Portable Converter Master - v12.6
-
-> Esse README.md é temporário.
+# Portable Converter - v19.4.26
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FFmpeg](https://img.shields.io/badge/FFmpeg-0078d4?style=for-the-badge&logo=ffmpeg&logoColor=white)](https://ffmpeg.org/)
 [![Pillow](https://img.shields.io/badge/Pillow-101010?style=for-the-badge&logo=pypi&logoColor=white)](https://python-pillow.org/)
-[![Tkinter](https://img.shields.io/badge/Tkinter-00599C?style=for-the-badge&logo=python&logoColor=white)](https://docs.python.org/3/library/tkinter.html)
+[![Azure Theme](https://img.shields.io/badge/Interface-Azure_Dark-005a9e?style=for-the-badge)](https://github.com/rdbende/Azure-ttk-theme)
 
-Aplicação desktop desenvolvida em Python para conversão em lote de imagens, utilizando uma interface dinâmica baseada em Canvas para gerenciamento visual da fila de arquivos através do sistema **Flash Cover Flow**.
+Um conversor multimídia simples, leve e eficiente. Desenvolvido para facilitar a conversão de arquivos do dia a dia com uma interface intuitiva utilizando o tema Azure Dark.
 
-## Visualizar Projeto
-O repositório oficial e o código-fonte estão disponíveis em:  
-**[github.com/murilo-guimaraes/portable-converter](https://github.com/murilo-guimaraes/portable-converter)**
-
-> **Nota:** Interface e lógica de processamento em constante evolução para garantir compatibilidade e performance. Feedbacks e pull requests são bem-vindos.
+> [!TIP]
+> **DOCUMENTOS (MODO BETA):** A funcionalidade de conversão de documentos está em fase experimental. Suporta PDF para DOCX/TXT e TXT para PDF.
 
 ---
 
-## O que há de novo?
-### Versão v12.6
-Refinamento de interface e novas funcionalidades de fluxo de trabalho.
-
-* **Escala Progressiva**: Ajuste dinâmico de dimensões nas extremidades do carrossel para evitar o corte de frames no Canvas.
-* **Gestão de Saída**: Implementação de Checkbox para definição opcional de criação da pasta "Convertidos".
-* **Automação de Sistema**: Opção para abertura automática do Windows Explorer no diretório de destino após a conclusão do processo.
-* **Estabilidade**: Correção de exceções de atributo e otimização de memória no carregamento de previews dinâmicos.
+<p align="center">
+  <img src="screenshots/videos.gif" width="1200" alt="Demonstração do Portable Converter">
+</p>
 
 ---
 
-## Funcionalidades e Tecnologias
-* **Flash Cover Flow**: Sistema de carrossel com profundidade visual, brilho dinâmico e renderização em tempo real via PIL (Pillow).
-* **Drag and Drop**: Suporte nativo para importação de arquivos via arraste diretamente para a interface (TkinterDnD2).
-* **Fila Avançada**: Janela de gerenciamento secundária com suporte a atalhos de teclado (`Delete`/`Backspace`) e visualização detalhada.
-* **Suporte Multi-Formato**: Conversão compatível com PNG, ICO, JPG, WEBP, JPEG, BMP, GIF e TIFF.
+## Funcionalidades
+* **Interface Moderna**: Visual limpo e focado em usabilidade com suporte a modo escuro.
+* **Conversão em Lote**: Processe múltiplos arquivos simultaneamente para ganhar tempo.
+* **Controle de Performance**: Escolha entre 1 a 4 processos paralelos e ajuste a velocidade do motor (Presets).
+* **Arrastar e Soltar**: Suporte nativo para importação de ficheiros via Drag and Drop.
 
 ---
 
-## Estrutura de Arquivos
-```text
-├── assets/                 # Recursos visuais, ícones e screenshots
-├── conversor.py            # Script principal (Lógica de processamento e GUI)
-├── README.md               # Documentação técnica do projeto
-└── Convertidos/            # Diretório de saída gerado automaticamente (opcional)
+## Tecnologias e Suporte
+* **Vídeo e Áudio**: Processamento de alto desempenho via motor FFmpeg (MP4, AVI, MKV, MP3, etc).
+* **Imagens**: Gerenciamento e conversão rápida de formatos (PNG, JPG, WEBP, ICO) através da biblioteca Pillow.
+* **Documentos**: Integração com PyMuPDF e pdf2docx para fluxos de texto.
+
+---
+
+## Demonstração Visual
+
+| Fila de Conversão | Seleção de Formatos |
+| :---: | :---: |
+| <img src="screenshots/teste_fila.png" width="500px" alt="Fila de Arquivos"> | <img src="screenshots/imagens.png" width="500px" alt="Seleção de Formatos"> |
+
+*Legenda: Visualização da interface principal e do menu de seleção de categorias.*
+
+---
+
+## Como usar
+
+### 1. Requisitos do FFmpeg
+Por ser um componente pesado, o FFmpeg não está incluído no repositório.
+1. Baixe os binários oficiais em [ffmpeg.org](https://ffmpeg.org/download.html).
+2. Crie uma pasta chamada `ffmpeg` na raiz do projeto.
+3. Coloque o executável no caminho: `ffmpeg/bin/ffmpeg.exe`.
+
+### 2. Instalação
+No terminal, instale as dependências necessárias:
 ```
-## Instalação e Execução
+pip install -r requirements.txt
+```
+### 3. Execução
+Como o código-fonte está organizado na pasta `src`, utilize o comando:
+```
+python src/conversor.py
+```
 
-1. Instale as dependências via gerenciador de pacotes:
+### Estrutura de Arquivos
+```
+├── azure/                  # Tema visual padrão Dark Mode.
+├── ffmpeg/                 # Pasta para os binários do FFmpeg (Manual)
+├── src/                    # Código-fonte principal
+│   └── conversor.py        # Script do aplicativo
+├── requirements.txt        # Dependências de bibliotecas
+└── README.md               # Documentação do projeto
+```
 
-    `pip install Pillow tkinterdnd2`
-
-2. Execute o script principal:
- 
-    `python conversor.py`
+<p align="center">
+   <img src="screenshots/imagens.gif" width="1200px" alt="Teste com Imagens>
+</p>
